@@ -8,7 +8,7 @@ This directory is a static mirror of `https://nuojiji.pages.dev/`, adjusted to r
 - The runtime preload helper now resolves asset URLs from `document.baseURI`.
 - Service worker auto-registration was disabled to avoid broken cache manifests from the original deployment.
 - A minimal no-op `sw.js` was added so direct service worker requests stay harmless.
-- A GitHub Pages Actions workflow was added at `.github/workflows/deploy.yml`.
+- `.nojekyll` was added so GitHub Pages serves the mirrored static files directly.
 
 ## Deploy
 
@@ -16,8 +16,9 @@ This directory is a static mirror of `https://nuojiji.pages.dev/`, adjusted to r
 2. Upload the contents of this folder to the repository root.
 3. Push to the `main` branch.
 4. In GitHub, open `Settings -> Pages`.
-5. Set `Build and deployment` to `GitHub Actions`.
-6. Wait for the `Deploy to GitHub Pages` workflow to finish.
+5. Set `Build and deployment` to `Deploy from a branch`.
+6. Choose branch `main` and folder `/ (root)`.
+7. Save and wait for the site to publish.
 
 ## Notes
 
